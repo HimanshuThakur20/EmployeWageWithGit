@@ -1,9 +1,7 @@
 public class Employee {
     String name;
     Integer id;
-
     Integer wagePerHour;
-
     Integer workHour = 0;
     Integer attendence;
 

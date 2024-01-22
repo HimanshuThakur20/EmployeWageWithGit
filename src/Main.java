@@ -29,10 +29,16 @@ public class Main {
         Main m1 = new Main();
         System.out.println(m1.calculateSalary(e1));
 
+        System.out.println("Employee's monthly income is: ");
+        System.out.println(m1.calculateIncome(e1));
+
 
     }
     double calculateSalary(Employee e){
         return e.workHour*e.wagePerHour;
+    }
+    double calculateIncome(Employee e){
+        return 20*e.workHour*e.wagePerHour;
     }
 }
 

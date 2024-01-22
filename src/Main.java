@@ -1,24 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        Employee e1 = new Employee("Bharat",1,200);
-        int check = (int)((Math.random()*10))%3;
+        Employee e1 = new Employee("Bharat", 1, 200);
+        int check = (int) ((Math.random() * 10)) % 3;
 
-        if (check == 0){
+        if (check == 0) {
             e1.attendence = 0;
-        }else if (check == 1) {
+        } else if (check == 1) {
             e1.attendence = 1;
-        }else {
+        } else {
             e1.attendence = 2;
         }
 
-        if(e1.attendence==1){
-            System.out.println("Employee is present");
-            e1.workHour = 8;
-        }else if(e1.attendence == 0) {
-            System.out.println("Employee is absent");
-        }else {
-            System.out.println("Employee is part time");
-            e1.workHour = 4;
+        switch (e1.attendence) {
+            case 1:
+                System.out.println("Employee is present");
+                e1.workHour = 8;
+                break;
+            case 2:
+                System.out.println("Employee is absent");
+                break;
+            default:
+                System.out.println("Employee is part time");
+                e1.workHour = 4;
+
         }
 
         //it is a Not static method

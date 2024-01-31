@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         Employee e1 = new Employee("Bharat", 1, 200);
+        ComputeWage c1 = new ComputeWage();
         int totalWorkHour=0;
         int totalWorkingDays=0;
 
@@ -35,7 +36,7 @@ public class Main {
 
             }
 
-            System.out.println("\nToday's earnings "+m1.calculateSalary(e1));
+            System.out.println("\nToday's earnings "+c1.calculateSalary(e1));
 
 
             totalWorkingDays++;
@@ -45,15 +46,10 @@ public class Main {
 
         }
         System.out.print("\n\nEmployee's monthly income is: ");
-        System.out.println(m1.calculateIncome(e1,totalWorkHour));
+        System.out.println(c1.calculateIncome(e1,totalWorkHour));
 
     }
-    double calculateSalary(Employee e){
-        return e.workHour*e.wagePerHour;
-    }
-    double calculateIncome(Employee e,int totalWorkHour){
-        return totalWorkHour*e.wagePerHour;
-    }
+
 }
 
 
